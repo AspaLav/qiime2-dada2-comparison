@@ -47,11 +47,7 @@ qiime tools import \
 #### -dada2_taxonomy.qza - DADA2 taxonomy in QIIME2 format
 #### -Ready for comparison with QIIME2 Moving Pictures results
 
-### Run in Ubuntu the following:
-Rscript scripts/01_f1score_analysis.R
-
-
-## Script 1: export_data.sh
+## Running the Scripts
 
 ### Commands Executed:
 
@@ -59,8 +55,8 @@ Rscript scripts/01_f1score_analysis.R
 # Navigated to scripts directory
 cd /mnt/c/Users/Aspasia/Desktop/Thesis\ ΕΚΕΤΑ/qiime2-dada2-comparison/scripts/
 
-# Made the script executable
-chmod +x export_data.sh
+# Run the scripts
+Rcript scripts/01_f1score_analysis.R
+Rcript scripts/02_taxonomic_composition.R
+Rcript scripts/03_jaccard_analysis.R
 
-# Ran the export script
-./export_data.sh

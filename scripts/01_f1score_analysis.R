@@ -16,10 +16,10 @@ output_path <- file.path(project_path, "processed_data/comprehensive_analysis")
 # Create output directory
 dir.create(output_path, recursive = TRUE, showWarnings = FALSE)
 
-# Load taxonomy data
+# Load taxonomy data - USING THE FIXED DADA2 FILE
 cat("Loading taxonomy files...\n")
 qiime2_tax <- read.delim(file.path(input_path, "qiime2_taxonomy.tsv"), sep = "\t")
-dada2_tax <- read.delim(file.path(input_path, "dada2_taxonomy.tsv"), sep = "\t")
+dada2_tax <- read.delim(file.path(input_path, "dada2_taxonomy_md5.tsv"), sep = "\t")
 ground_truth_tax <- read.delim(file.path(input_path, "ground_truth_taxonomy.tsv"), sep = "\t")
 
 cat("Data dimensions:\n")
